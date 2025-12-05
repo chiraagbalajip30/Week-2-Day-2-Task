@@ -6,60 +6,100 @@
     <title>Fashion Catalog</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- TITLE SECTION -->
-    <header class="catalog-header">
-      <h1>New Arrivals</h1>
-      <p>Explore the latest fashion trends</p>
-    </header>
 
-    <!-- MAIN GRID (SIDEBAR + PRODUCTS) -->
+  <body>
     <div class="catalog-container">
-      <!-- Sidebar Filters -->
-      <aside class="filters">
+      <!-- Sidebar Filter -->
+      <aside class="sidebar">
         <h2>Filters</h2>
 
         <div class="filter-group">
           <h3>Category</h3>
-          <label><input type="checkbox" />Dresses</label>
-          <label><input type="checkbox" /> Tops</label>
-          <label><input type="checkbox" /> Jeans</label>
-          <label><input type="checkbox" /> Jackets</label>
+          <label><input type="checkbox" /> Dresses</label>
+          <label><input type="checkbox" /> Shoes</label>
+          <label><input type="checkbox" /> Accessories</label>
         </div>
 
         <div class="filter-group">
-          <h3>Price</h3>
+          <h3>Price Range</h3>
           <label><input type="checkbox" /> Under ₹999</label>
-          <label><input type="checkbox" /> ₹1000–₹1999</label>
-          <label><input type="checkbox" /> ₹2000+</label>
+          <label><input type="checkbox" /> ₹1000 – ₹1999</label>
+          <label><input type="checkbox" /> Above ₹2000</label>
         </div>
       </aside>
 
-      <!-- Product Grid -->
-      <section class="product-grid">
-        <!-- 8–12 cards -->
-        <div class="product-card">Product 1</div>
-        <div class="product-card">Product 2</div>
-        <div class="product-card">Product 3</div>
-        <div class="product-card">Product 4</div>
-        <div class="product-card">Product 5</div>
-        <div class="product-card">Product 6</div>
-        <div class="product-card">Product 7</div>
-        <div class="product-card">Product 8</div>
-      </section>
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Title Section -->
+        <header class="title-section">
+          <h1>New Arrivals</h1>
+          <p>Discover the latest trends curated specially for you.</p>
+        </header>
+
+        <!-- Product Grid -->
+        <section class="product-grid">
+          <div class="product-card">
+            <img src="images/product1.jpg" alt="Dress" />
+            <h4>Floral Summer Dress</h4>
+            <p>₹1499</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product2.jpg" alt="Shoes" />
+            <h4>Classic White Sneakers</h4>
+            <p>₹1299</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product3.jpg" alt="Handbag" />
+            <h4>Leather Handbag</h4>
+            <p>₹1999</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product4.jpg" alt="Sunglasses" />
+            <h4>Stylish Sunglasses</h4>
+            <p>₹699</p>
+          </div>
+
+          <!-- Duplicate to make 8–12 products -->
+          <div class="product-card">
+            <img src="images/product1.jpg" alt="" />
+            <h4>Printed Dress</h4>
+            <p>₹999</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product3.jpg" alt="" />
+            <h4>Handcrafted Tote</h4>
+            <p>₹1599</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product2.jpg" alt="" />
+            <h4>Running Shoes</h4>
+            <p>₹1899</p>
+          </div>
+
+          <div class="product-card">
+            <img src="images/product4.jpg" alt="" />
+            <h4>Vintage Sunglasses</h4>
+            <p>₹799</p>
+          </div>
+        </section>
+
+        <!-- Featured Magazine Block -->
+        <section class="featured-block">
+          <div class="featured-text">
+            <h2>Fashion Magazine Picks</h2>
+            <p>Handpicked styles featured in top fashion magazines.</p>
+          </div>
+
+          <div class="featured-image">
+            <img src="images/featured.jpg" alt="Featured Fashion" />
+          </div>
+        </section>
+      </main>
     </div>
-
-    <!-- MAGAZINE FEATURE SECTION -->
-
-    <section class="magazine-feature">
-      <div class="feature-text">
-        <h2>Featured Editorial</h2>
-        <p>
-          Discover this month's spotlight styles curated by our fashion editors.
-        </p>
-      </div>
-
-      <div class="feature-image">Image Area</div>
-    </section>
   </body>
 </html>

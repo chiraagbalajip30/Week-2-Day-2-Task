@@ -1,190 +1,123 @@
-/* ================================
-   GLOBAL STYLES
-=================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* Global + Theme */
 body {
-  background: linear-gradient(135deg, #f7f3ec, #e9e2d6);
-  color: #333;
+  margin: 0;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  padding-bottom: 80px;
+  background: #f8f5f2;
+  color: #222;
 }
 
-
-/* ================================
-   HEADER (Title Section)
-=================================== */
-
-.catalog-header {
-  text-align: center;
-  padding: 60px 20px;
-  background: #ffffff;
-  border-bottom: 2px solid #e8e1d9;
+h1, h2, h3, h4 {
+  margin: 0;
 }
 
-.catalog-header h1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
-  color: #111;
-  font-weight: 600;
-}
-
-.catalog-header p {
-  margin-top: 10px;
-  color: #555;
-  font-size: 1.2rem;
-}
-
-/* ================================
-   MAIN CATALOG (Sidebar + Products)
-=================================== */
-
+/* Main Container */
 .catalog-container {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 40px;
-  padding: 50px;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Sidebar Filters */
-.filters {
-  background: #fff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eee;
+/* Sidebar */
+.sidebar {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.filters h2 {
-  margin-bottom: 25px;
+.sidebar h2 {
   font-size: 1.5rem;
-  color: #111;
-  border-left: 4px solid #d4af37;
-  padding-left: 10px;
-  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .filter-group {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .filter-group h3 {
-  font-size: 1rem;
   margin-bottom: 10px;
-  color: #444;
+  color: #d63384;
 }
 
 .filter-group label {
   display: block;
-  margin: 6px 0;
-  cursor: pointer;
-  font-size: 0.95rem;
+  padding: 6px 0;
 }
 
-/* ================================
-   PRODUCT GRID
-=================================== */
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 30px;
-}
-
-/* Product Cards */
-.product-card {
-  height: 280px;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: #222;
-  font-weight: 500;
-  border: 1px solid #eee;
-  transition: 0.25s ease-in-out;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.14);
-  border-color: #d4af37;
-}
-
-/* ================================
-   MAGAZINE FEATURE SECTION
-=================================== */
-
-.magazine-feature {
-  margin: 80px auto;
-  width: 90%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 50px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Text */
-.feature-text h2 {
-  font-size: 2.4rem;
+/* Title Section */
+.title-section {
   margin-bottom: 20px;
-  font-weight: 600;
-  color: #111;
 }
 
-.feature-text p {
+.title-section h1 {
+  font-size: 2.4rem;
+  color: #d63384;
+}
+
+.title-section p {
   font-size: 1.1rem;
   color: #555;
-  line-height: 1.8;
 }
 
-/* Image Box */
-.feature-image {
-  background: #e9e2d6;
-  border-radius: 16px;
-  height: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.2rem;
-  border: 1px solid #d4af37;
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-/* ================================
-   RESPONSIVE
-=================================== */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 16px;
+  text-align: center;
+}
 
-@media (max-width: 992px) {
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h4 {
+  margin: 12px 0 5px;
+}
+
+/* Featured Magazine Block */
+.featured-block {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.featured-text h2 {
+  color: #d63384;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 12px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .catalog-container {
     grid-template-columns: 1fr;
-    padding: 30px;
   }
 
-  .magazine-feature {
+  .featured-block {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .catalog-container {
-    padding: 20px;
-  }
-
-  .magazine-feature {
-    padding: 30px;
   }
 }
