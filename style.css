@@ -1,0 +1,190 @@
+/* ================================
+   GLOBAL STYLES
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f7f3ec, #e9e2d6);
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+
+
+/* ================================
+   HEADER (Title Section)
+=================================== */
+
+.catalog-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-bottom: 2px solid #e8e1d9;
+}
+
+.catalog-header h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: #111;
+  font-weight: 600;
+}
+
+.catalog-header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* ================================
+   MAIN CATALOG (Sidebar + Products)
+=================================== */
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  padding: 50px;
+}
+
+/* Sidebar Filters */
+.filters {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.filters h2 {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  color: #111;
+  border-left: 4px solid #d4af37;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.filter-group {
+  margin-bottom: 30px;
+}
+
+.filter-group h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.filter-group label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   PRODUCT GRID
+=================================== */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+/* Product Cards */
+.product-card {
+  height: 280px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #222;
+  font-weight: 500;
+  border: 1px solid #eee;
+  transition: 0.25s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.14);
+  border-color: #d4af37;
+}
+
+/* ================================
+   MAGAZINE FEATURE SECTION
+=================================== */
+
+.magazine-feature {
+  margin: 80px auto;
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Text */
+.feature-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Image Box */
+.feature-image {
+  background: #e9e2d6;
+  border-radius: 16px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid #d4af37;
+}
+
+/* ================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 992px) {
+  .catalog-container {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .magazine-feature {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    padding: 20px;
+  }
+
+  .magazine-feature {
+    padding: 30px;
+  }
+}
